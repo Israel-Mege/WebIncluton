@@ -11,9 +11,7 @@ const nextConfig = {
   },
   output: 'standalone',
   experimental: {
-    serverActions: {
-      allowedOrigins: ['webincluton.israelmege.workers.dev', '*.workers.dev'],
-    },
+    serverActions: true
   }
 };
 
