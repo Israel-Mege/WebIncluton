@@ -8,6 +8,12 @@ const nextConfig = {
   },
   eslint: {
     ignoreDuringBuilds: true,
+  },
+  output: 'standalone',
+  experimental: {
+    serverActions: {
+      allowedOrigins: ['webincluton.israelmege.workers.dev', '*.workers.dev'],
+    },
   }
 };
 
