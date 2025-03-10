@@ -10,7 +10,9 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   output: 'export',
-  distDir: '.next'
+  distDir: '.next',
+  trailingSlash: true,
+  assetPrefix: '/'
 };
 
 if (process.env.NODE_ENV === 'development') {
