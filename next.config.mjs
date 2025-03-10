@@ -10,10 +10,7 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   output: 'export',
-  distDir: '.next',
-  experimental: {
-    serverActions: true
-  }
+  distDir: '.next'
 };
 
 if (process.env.NODE_ENV === 'development') {
