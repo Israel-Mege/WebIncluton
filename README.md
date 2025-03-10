@@ -1,6 +1,60 @@
-# Next.js Project
+# WebIncluton
 
-Este es un proyecto desarrollado con Next.js que incluye:
+Hackathon de inclusión tecnológica.
+
+## Despliegue en Railway
+
+Este proyecto está configurado para ser desplegado en [Railway](https://railway.app/), una plataforma moderna para desplegar aplicaciones web.
+
+### Pasos para desplegar en Railway
+
+1. Crea una cuenta en [Railway](https://railway.app/)
+2. Instala la CLI de Railway:
+   ```bash
+   npm i -g @railway/cli
+   ```
+3. Inicia sesión en Railway:
+   ```bash
+   railway login
+   ```
+4. Crea un nuevo proyecto:
+   ```bash
+   railway init
+   ```
+5. Conecta tu repositorio de GitHub o despliega directamente:
+   ```bash
+   railway up
+   ```
+6. Configura las variables de entorno en el panel de Railway
+
+### Variables de entorno
+
+Copia el archivo `.env.example` a `.env` y configura las variables según sea necesario.
+
+### Comandos útiles
+
+- `railway link`: Vincula tu proyecto local con un proyecto de Railway
+- `railway status`: Muestra el estado de tu proyecto
+- `railway logs`: Muestra los logs de tu aplicación
+- `railway open`: Abre el panel de Railway para tu proyecto
+
+## Desarrollo local
+
+1. Clona el repositorio
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+3. Inicia el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+
+## Tecnologías utilizadas
+
+- Next.js
+- React
+- Tailwind CSS
 
 ## Características
 
@@ -18,15 +72,6 @@ Este es un proyecto desarrollado con Next.js que incluye:
 ├── contexts/      # Contextos de React
 ├── hooks/         # Hooks personalizados
 └── lib/           # Utilidades y configuraciones
-```
-
-## Desarrollo
-
-Para ejecutar el proyecto en modo desarrollo:
-
-```bash
-npm install
-npm run dev
 ```
 
 ## GitFlow
