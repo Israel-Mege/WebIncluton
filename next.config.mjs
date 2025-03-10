@@ -12,7 +12,8 @@ const nextConfig = {
   output: 'export',
   distDir: '.next',
   trailingSlash: true,
-  assetPrefix: '/'
+  assetPrefix: '/',
+  basePath: ''
 };
 
 if (process.env.NODE_ENV === 'development') {

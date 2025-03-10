@@ -1,16 +1,18 @@
+import { NextResponse } from 'next/server';
+
 export function middleware(request) {
-  // Middleware vacío para asegurar que Cloudflare maneje correctamente las rutas
+  // Obtener la URL actual
+  const url = request.nextUrl.clone();
+  
+  // Si la URL termina con / y no es la raíz, redirigir a la versión sin /
+  if (url.pathname.endsWith('/') && url.pathname !== '/') {
+    url.pathname = url.pathname.slice(0, -1);
+    return NextResponse.redirect(url);
+  }
+  
+  return NextResponse.next();
 }
 
 export const config = {
-  matcher: [
-    /*
-     * Coincide con todas las rutas de solicitud excepto las que comienzan con:
-     * - api (rutas API)
-     * - _next/static (archivos estáticos)
-     * - _next/image (optimización de imágenes)
-     * - favicon.ico (favicon)
-     */
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
-  ],
+  matcher: '/:path*',
 } 
